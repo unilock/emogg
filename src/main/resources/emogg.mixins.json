@@ -10,7 +10,6 @@
     "gui.ChatScreenMixin",
     "gui.InBedChatScreenMixin",
     "gui.GuiMixin",
-    "gui.MinecraftMixin",
     "parsing.ComponentMixin",
     "parsing.ComponentSerializerMixin",
     "parsing.MutableComponentMixin",
