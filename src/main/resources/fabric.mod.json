@@ -11,12 +11,12 @@
   "contributors": [
     "Abbie5",
     "Spurkus",
-    "お餅のCreeeper",
-    "Katherine"
+    "unilock",
+    "お餅のCreeeper"
   ],
   "contact": {
-    "sources": "https://github.com/aratakileo/emogg",
     "homepage": "https://modrinth.com/mod/emogg",
+    "sources": "https://github.com/aratakileo/emogg",
     "issues": "https://github.com/aratakileo/emogg/issues"
   },
   "license": "GPL-3.0",
@@ -34,7 +34,9 @@
     "emogg.mixins.json"
   ],
   "depends": {
-    "suggestions-api": ">=${suggestions_api_version}"
+    "fabricloader": ">=0.14.0",
+    "minecraft": ">=1.20",
+    "fabric-api": "*"
   },
   "accessWidener" : "emogg.accesswidener"
 }
