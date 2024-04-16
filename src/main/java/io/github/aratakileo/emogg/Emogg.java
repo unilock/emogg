@@ -19,11 +19,9 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.regex.Pattern;
 
-
 public class Emogg implements ClientModInitializer {
-    public static final Logger LOGGER = LoggerFactory.getLogger(Emogg.class);
-
     public static final String NAMESPACE_OR_ID = "emogg";
+    public static final Logger LOGGER = LoggerFactory.getLogger(NAMESPACE_OR_ID);
 
     @Override
     public void onInitializeClient() {
