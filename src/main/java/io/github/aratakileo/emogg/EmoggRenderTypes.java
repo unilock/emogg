@@ -313,7 +313,8 @@ public class EmoggRenderTypes {
 
         public static void loadShaders(ResourceProvider resourceProvider, List<Pair<ShaderInstance, Consumer<ShaderInstance>>> list) {
             customShadersAvailable = false;
-            Emogg.LOGGER.info("Loading emogg shaders...");
+            if (EmoggConfig.instance.enableDebugMode)
+                Emogg.LOGGER.info("Loading emogg shaders...");
             
             try {
                 _loadShaders(resourceProvider, list);

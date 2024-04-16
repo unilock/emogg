@@ -80,8 +80,9 @@ public class EmojiAtlas {
             freeSpace.add(new Rect2i(0, 0, totalWidth, totalHeight));
 //            glyphRenderTypes = EmoggRenderTypes.emojiTextured(this.name);
 
-            Emogg.LOGGER.info("Created emoji atlas texture: {}x{} {}",
-                    totalWidth, totalHeight, getName());
+            if (EmoggConfig.instance.enableDebugMode)
+                Emogg.LOGGER.info("Created emoji atlas texture: {}x{} {}",
+                        totalWidth, totalHeight, getName());
         }
 
         @Override
@@ -195,10 +196,11 @@ public class EmojiAtlas {
                 freeSpace.add(new Rect2i(0, oldHeight, totalWidth, totalHeight - oldHeight));
             }
 
-            Emogg.LOGGER.info("Expanding emoji atlas: %dx%d -> %dx%d".formatted(
-                    oldWidth, oldHeight,
-                    totalWidth, totalHeight
-            ));
+            if (EmoggConfig.instance.enableDebugMode)
+                Emogg.LOGGER.info("Expanding emoji atlas: %dx%d -> %dx%d".formatted(
+                        oldWidth, oldHeight,
+                        totalWidth, totalHeight
+                ));
 
             // Copy data
             bind();

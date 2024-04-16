@@ -1,6 +1,7 @@
 package io.github.aratakileo.emogg.mixin.mixins.font;
 
 import io.github.aratakileo.emogg.Emogg;
+import io.github.aratakileo.emogg.EmoggConfig;
 import io.github.aratakileo.emogg.emoji.EmojiFontSet;
 import net.minecraft.client.gui.font.FontManager;
 import net.minecraft.client.gui.font.FontSet;
@@ -25,6 +26,7 @@ public class FontManagerMixin {
     @Inject(method = "apply", at = @At("TAIL"))
     private void postReload(FontManager.Preparation preparation, ProfilerFiller profilerFiller, CallbackInfo ci) {
         this.fontSets.put(EmojiFontSet.NAME, new EmojiFontSet(this.textureManager));
-        Emogg.LOGGER.info("Internal emoji font registered! ("+ EmojiFontSet.NAME+")");
+        if (EmoggConfig.instance.enableDebugMode)
+            Emogg.LOGGER.info("Internal emoji font registered! ("+ EmojiFontSet.NAME+")");
     }
 }
