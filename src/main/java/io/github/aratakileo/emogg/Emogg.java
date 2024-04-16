@@ -42,7 +42,6 @@ public class Emogg implements ClientModInitializer {
         EmoggConfig.load();
         EmojiManager.init();
 
-        registerBuiltinResourcePack("builtin");
         registerBuiltinResourcePack("twemogg");
     }
 
